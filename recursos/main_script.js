@@ -4,7 +4,8 @@ const $formBtn = document.querySelector(".formulario-btn"),
   $menuBtn = document.querySelector(".menu-btn"),
   $hamburgerBtn = document.querySelector(".hamburger-btn"),
   $menu = document.querySelector(".stack_items"),
-  $stackItems = document.querySelectorAll(".items");
+  $stackItems = document.querySelectorAll(".items"),
+  $footer = document.querySelector("footer");
 
 const formContact = () => {
   $formBtn.style.display = "none";
@@ -72,7 +73,7 @@ const $stackImgs = document.querySelectorAll(".articulos_contenedor > article > 
     }
   })
 
-/* ------------------------------------- */
+/* ----------Out menu------------ */
 
 document.addEventListener("DOMContentLoaded",() => {
   $stackItems.forEach(item => {
@@ -100,11 +101,9 @@ $formContainer.addEventListener("submit",(e) => {
     body: new FormData(e.target)
   })
   .then(respuesta => {
-    if(respuesta.ok){
-      return respuesta.json;
-    }else{
-      return Promise.reject(respuesta);
-    }
+    return respuesta.ok 
+    ? respuesta.json()
+    : Promise.reject(respuesta);
   })
   .then(json => {
     console.log(json);
@@ -119,7 +118,7 @@ $formContainer.addEventListener("submit",(e) => {
     console.log(err);
     /* Imprimir mensaje de error */
     $msg.classList.remove("contact-response-container")
-    $msg.textContent = "Ocurrió un error. Vuelve a intentarlo";
+    $msg.textContent = `Error ${err.status}. Vuelve a intentarlo`;
     $msg.style.display = "flex";
     $msg.classList.add("contact-response-container")
     document.body.insertAdjacentElement("afterbegin",$msg)
@@ -135,7 +134,7 @@ $formContainer.addEventListener("submit",(e) => {
 /* OUT HAMBURGER BTN */
 
 window.addEventListener("scroll", () => {
-  if(scrollY > 2500){
+  if($hamburgerBtn.getBoundingClientRect().top >= ($footer.getBoundingClientRect().top - $hamburgerBtn.clientHeight)){
     $hamburgerBtn.classList.add("fade-out");
     $hamburgerBtn.style.pointerEvents = "none";
   }else{

@@ -515,6 +515,7 @@ main{
 }
 
 .proyectos-container-header{
+  font-size: 2rem;
   margin: 2rem 0;
   text-align: center;
   width: 100%;
@@ -526,6 +527,12 @@ main{
   grid-template-rows: 1fr 3fr 3fr;
   height: 100vh;
   width: 100%;
+}
+
+.proyecto-header{
+  align-self: center;
+  justify-self: center;
+  font-size: 1.5rem;
 }
 
 .redes_sociales{
@@ -578,6 +585,39 @@ main{
 .stack_items li:hover{
   color: var(--third-color);
 }
+
+/* SLIDER PROYECTOS */
+.proyecto-slider-container{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider-img-container{
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.slider-item{
+  display: flex;
+  list-style: none;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  opacity: 1;
+  visibility: visible;
+  transition: all .8s ease;
+}
+
+.slider-item img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* ------------------ */
 
 @media screen and (min-width:700px){
   a,button{
@@ -773,6 +813,7 @@ main{
 
   .background{
    background-position: -10rem 0;
+   background-attachment: fixed;
   }
 
   .botonera_lista{
@@ -1032,6 +1073,7 @@ main{
 
   .background{
    background-position: 0 0;
+   background-attachment: fixed;
   }
 
   .botonera{
@@ -1256,6 +1298,7 @@ main{
   justify-content: center;
   position: fixed;
   height: 100vh;
+  text-align: center;
   width: 100%;
   z-index: 100000;
 }
@@ -1274,7 +1317,7 @@ main{
   0%{
     visibility: hidden;
     opacity: 0;
-    transform: translateX(-400%);
+    transform: translateX(-100%);
   }
 
   100%{
@@ -1288,7 +1331,7 @@ main{
   0%{
     visibility: hidden;
     opacity: 0;
-    transform: translateX(400%);
+    transform: translateX(100%);
   }
 
   100%{

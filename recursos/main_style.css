@@ -143,6 +143,10 @@ a{
   position: fixed;
   width: 100%;
   z-index: 9999;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+  animation-duration: .3s;
+  animation-fill-mode: forwards;
 }
 
 .certificados{
@@ -245,6 +249,7 @@ a{
   width: 20rem;
   transform: scale(0);
   transition: transform .3s ease-out;
+  z-index: 9999;
 }
 
 .formulario-active{
@@ -301,11 +306,12 @@ a{
 }
 
 .formulario-btn-container{
-  height: 4rem;
+  height: 3rem;
   position: fixed;
-  width: 4rem;
+  width: 3rem;
   bottom: 6rem;
   right: .2rem;
+  z-index: 9999;
 }
 
 .formulario-btn{
@@ -358,10 +364,20 @@ main{
   text-align: center;
 }
 
+.git_contenido p{
+  align-self: center;
+  color: var(--dark-content-color);
+  font-size: 4vw;
+  justify-self: center;
+  text-align: justify;
+  text-indent: .5rem;
+  width: 70%;
+}
+
 .hamburger-btn-container{
-  height: 4rem;
+  height: 3rem;
   position: fixed;
-  width: 4rem;
+  width: 3rem;
   bottom: .2rem;
   right: .2rem;
   z-index: 999;
@@ -522,7 +538,6 @@ main{
 }
 
 #proyecto1{
-  background: var(--bg-alpha-color);
   display: grid;
   grid-template-rows: 1fr 3fr 3fr;
   height: 100vh;
@@ -532,7 +547,36 @@ main{
 .proyecto-header{
   align-self: center;
   justify-self: center;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.proyecto1-description{
+  background: var(--bg-alpha-color);
+  color: var(--dark-content-color);
+  font-size: 4vw;
+  padding: .5rem;
+}
+
+.proyecto1-description p{
+  margin: 1rem 0;
+}
+
+.btn-to-repo{
+  background: rgba(150, 150, 150, 0.5);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  height: 3rem;
+  margin-right: 1rem;
+  padding: 1rem;
+  width: auto;
+}
+
+.btn-to-repo a{
+  display: block;
+  height: 100%;
+  width: 100%;
 }
 
 .redes_sociales{
@@ -552,6 +596,20 @@ main{
 
 .redes_sociales-img:hover{
   transform: scale(1.2);
+}
+
+.repo{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.repo svg{
+  fill: var(--second-color);
+  height: 2.5rem;
+  stroke: var(--third-color);
+  stroke-width: 1.5px;
+  width: 2.5rem;
 }
 
 .stack_items{
@@ -608,13 +666,13 @@ main{
   position: absolute;
   opacity: 1;
   visibility: visible;
-  transition: all .8s ease;
+  transition: all 1s ease;
 }
 
 .slider-item img{
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 /* ------------------ */
@@ -803,6 +861,71 @@ main{
     justify-self: center;
     line-height: 3vh;
     width: 60%;
+  }
+
+  #proyecto1{
+    grid-template-columns: 1fr 1fr;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .proyecto-header{
+    align-self: flex-start;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    margin-top: 2rem;
+  }
+  
+  .proyecto-slider-container{
+    align-self: center;
+    grid-column: 1/2;
+    grid-row: 1/4;
+    max-height: 600px;
+    cursor: pointer;
+  }
+  
+  .proyecto1-description{
+    align-self: center;
+    font-size: 1rem;
+    grid-column: 2/3;
+    grid-row: 2/4;
+    height: 100%;
+    padding: 3rem;
+  }
+
+  .proyecto1-description p:first-child{
+    margin-top: 5rem;
+  }
+
+  .repo{
+    margin-top: 4rem;
+  }
+
+  .repo svg{
+    fill: rgba(150, 150, 150, 0.5);
+    stroke: var(--second-color);
+    transition: all .5s ease;
+  }
+
+  .repo svg:hover{
+    fill: var(--bg-alpha-color);
+    stroke: var(--third-color);
+  }
+
+  .btn-to-repo{
+    border: 2px solid var(--second-color);
+    padding: .9rem;
+    transition: border .5s ease, background .5s ease, color .5s ease;
+  }
+
+  .btn-to-repo:hover{
+    background: var(--bg-alpha-color);
+    border: 2px solid var(--third-color);
+    color: var(--dark-content-color);
+  }
+
+  .btn-to-repo a{
+    font-size: 1rem;
   }
 }
 
@@ -1313,6 +1436,12 @@ main{
   opacity: 0;
 }
 
+.slideImg{
+  visibility: hidden;
+  opacity: 0;
+  transform: perspective(500px) rotate3d(2, 0, 0, 90deg);
+}
+
 @keyframes fromLeft{
   0%{
     visibility: hidden;
@@ -1338,5 +1467,25 @@ main{
     visibility: visible;
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@keyframes hideLogo{
+  0%{
+    transform: translateY(0);
+  }
+
+  100%{
+    transform: translateY(-15vh);
+  }
+}
+
+@keyframes showLogo{
+  0%{
+    transform: translateY(-15vh);
+  }
+
+  100%{
+    transform: translateY(0);
   }
 }

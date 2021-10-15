@@ -5,7 +5,8 @@ const $formBtn = document.querySelector(".formulario-btn"),
   $hamburgerBtn = document.querySelector(".hamburger-btn"),
   $menu = document.querySelector(".stack_items"),
   $stackItems = document.querySelectorAll(".items"),
-  $footer = document.querySelector("footer");
+  $footer = document.querySelector("footer"),
+  $cabecera = document.querySelector(".cabecera");
 
 const formContact = () => {
   $formBtn.style.display = "none";
@@ -26,6 +27,59 @@ document.addEventListener("click", (e) => {
   if(e.target.matches(`.${$closeFormBtn.className}`)) closeForm();
   if(e.target.matches(`.${$menuBtn.className}`)) menuStack();
   if(e.target.matches(`.${$hamburgerBtn.className}`)) menuStack();
+
+  if(e.path[3].className === "proyecto-slider-container"){
+   
+    let coorX = e.x;
+
+    let left_or_right = (e.path[3].clientWidth) / 2;
+
+    const listaItems = document.querySelectorAll(".slider-item")
+
+    if(coorX < left_or_right){
+      /* Para ir a la izquierda */
+      for(let item = 0;item < listaItems.length;item++){
+        if(!(listaItems[0].classList.contains("slideImg"))){
+          /* Si el primer elemento es visible */
+          listaItems[(listaItems.length - 1)].classList.remove("slideImg")
+          /* Hacemos el ultimo elemento visible */
+          listaItems[0].classList.add("slideImg")
+          /* Lo contrario para el primero */
+          break
+        }
+        
+        if(listaItems[item].classList.contains("slideImg")){
+
+        }else{
+          listaItems[item].classList.add("slideImg")
+          listaItems[(item - 1)].classList.remove("slideImg")
+          break
+        }
+      }
+    }
+    
+    if(coorX >= left_or_right){
+      /* Para ir a la derecha */
+      for(let item = 0;item < listaItems.length;item++){
+        if(item === (listaItems.length - 1)){
+          /* Para el ultimo elemento */
+          listaItems[0].classList.remove("slideImg")
+          /* Se hace visible el primer elemento */
+          listaItems[(listaItems.length - 1)].classList.add("slideImg")
+          /* Lo contrario para el ultimo */
+          break
+        }
+        
+        if(listaItems[item].classList.contains("slideImg")){
+
+        }else{
+          listaItems[item].classList.add("slideImg")
+          listaItems[(item + 1)].classList.remove("slideImg")
+          break
+        }
+      }
+    }
+  }
 })
 
 
@@ -133,7 +187,7 @@ $formContainer.addEventListener("submit",(e) => {
 
 /* OUT HAMBURGER BTN */
 
-window.addEventListener("scroll", () => {
+window.addEventListener("scroll", (e) => {
   if($hamburgerBtn.getBoundingClientRect().top >= ($footer.getBoundingClientRect().top - $hamburgerBtn.clientHeight)){
     $hamburgerBtn.classList.add("fade-out");
     $hamburgerBtn.style.pointerEvents = "none";
@@ -141,4 +195,14 @@ window.addEventListener("scroll", () => {
     $hamburgerBtn.classList.remove("fade-out"); 
     $hamburgerBtn.style.pointerEvents = "all";
   }
+
+  if(scrollY > 0){
+    $cabecera.style.animationName = "hideLogo"
+    if($cabecera.style.animationName === "hideLogo"){
+      return ""
+    }
+  }else{
+    $cabecera.style.animationName = "showLogo"
+  }
+
 })

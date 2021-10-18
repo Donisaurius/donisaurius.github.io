@@ -44,7 +44,7 @@ body{
   overflow-x: hidden;
 }
 
-a{
+a,button{
   color: var(--content-color);
   font-family: var(--content-regular-font);
   font-size: 1rem;
@@ -103,6 +103,10 @@ a{
   justify-content: flex-start;
   height: 100%;
   width: 100%;
+}
+
+.btn-left, .btn-right{
+  display: none;
 }
 
 .menu-btn{
@@ -378,8 +382,8 @@ main{
   height: 3rem;
   position: fixed;
   width: 3rem;
-  bottom: .2rem;
-  right: .2rem;
+  bottom: .4rem;
+  right: .4rem;
   z-index: 999;
 }
 
@@ -793,7 +797,20 @@ main{
     font-family: var(--title-font);
     font-size: 8vw;
     letter-spacing: .5rem;
+    margin-top: 4rem;
     text-align: center;
+  }
+
+  .git_contenido p{
+    align-self: center;
+    color: var(--dark-content-color);
+    font-size: 1rem;
+    grid-row: 2/4;
+    justify-self: center;
+    text-align: justify;
+    text-indent: .5rem;
+    height:min-content;
+    width: 60%;
   }
 
   .html_contenido{
@@ -870,10 +887,15 @@ main{
   }
 
   .proyecto-header{
-    align-self: flex-start;
+    align-items: center;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: center;
     grid-column: 2/3;
     grid-row: 1/2;
     margin-top: 2rem;
+    height: 100%;
+    width: 100%;
   }
   
   .proyecto-slider-container{
@@ -882,6 +904,10 @@ main{
     grid-row: 1/4;
     max-height: 600px;
     cursor: pointer;
+  }
+
+  .slider-img-container{
+    height: 100%;
   }
   
   .proyecto1-description{
@@ -927,6 +953,7 @@ main{
   .btn-to-repo a{
     font-size: 1rem;
   }
+
 }
 
 @media screen and (min-width:1000px){
@@ -964,6 +991,72 @@ main{
   .stack:hover .stack_items{
     transform: translateX(0);
   }
+
+  .proyecto-header{
+    grid-column: 1/3;
+  }
+
+  .proyecto1-description{
+    font-size: 1.5rem;
+  }
+
+  .repo{
+    height: 3rem;
+  }
+
+  .btn-to-repo{
+    height: 3rem;
+    padding: .7rem;
+  }
+
+  .btn-to-repo a{
+    font-size: 1.2rem;
+  }
+
+  .btn-left, .btn-right{
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    height: 3rem;
+    position: absolute;
+    width: 3rem;
+    bottom: 0;
+  }
+
+  .proyecto-slider-container{
+    cursor: initial;
+    grid-row: 2/4;
+    max-height: 85%;
+    margin-top: 0;
+  }
+
+  .slider-img-container{
+    height: 90%;
+  }
+
+  .btn-right{
+    right: calc(50% - 3rem);
+  }
+
+  .btn-left{
+    left: calc(50% - 3rem);
+  }
+
+  .btn-left svg, .btn-right svg{
+    height: 100%;
+    fill: rgba(150, 150, 150, 0.5);
+    stroke: var(--second-color);
+    stroke-width: 1px;
+    transition: all .5s ease;
+    width: 100%;
+  }
+
+  .btn-left svg:hover, .btn-right svg:hover{
+    fill: var(--bg-alpha-color);
+    stroke: var(--third-color);
+  }
+
 }
 
 @media screen and (min-width:1290px){
@@ -972,7 +1065,7 @@ main{
   }
 
   .admr{
-    background: -webkit-radial-gradient(bottom,circle,#006a92,#04456e);
+    background: #04456ec7;
   }
 
   [data-article-con-certificado]{
@@ -1107,9 +1200,14 @@ main{
     font-family: var(--title-font);
     font-size: 3.4rem;
     letter-spacing: .5rem;
+    margin-top: 0;
     text-align: center;
   }
 
+  .git_contenido p{
+    font-size: 1.5rem;
+  }
+  
   .html_contenido{
     background-color: var(--bg-color);
     display: grid;
@@ -1187,11 +1285,25 @@ main{
     line-height: 1.5rem;
     width: 80%;
   }
+
+  .proyecto-slider-container{
+    max-height: 90%;
+  }
+
+  .slider-img-container{
+    height: 90%;
+  }
+
+  .btn-left, .btn-right{
+    bottom: 0;
+  }
+
 }
 
 @media screen and (orientation:landscape) and (max-width:812px){
   .admr{
     display: none;
+    background: #04456ec7;
   }
 
   .background{
@@ -1409,6 +1521,20 @@ main{
   .stack_items{
     height: auto;
   }
+
+  .proyecto-header{
+    align-self: center;
+    margin: 0;
+  }
+
+  .proyecto1-description{
+    height: 100%;
+    padding: 0 1rem;
+  }
+
+  .repo{
+    margin-top: 2rem;
+  }
   
 }
 /* CLASES UTILITARIAS Y ANIMACIONES */
@@ -1426,6 +1552,30 @@ main{
   z-index: 100000;
 }
 
+.tapLeftRight{
+  display: none;
+}
+
+.modalText{
+  align-items: center;
+  background: var(--bg-alpha-color);
+  color: var(--dark-content-color);
+  display: flex;
+  font-size: 2rem;
+  font-weight: 800;
+  height: 100%;
+  justify-content: center;
+  text-align: center;
+  text-shadow: 0 0 10px var(--third-color);
+  position: absolute;
+  width: 100%;
+  z-index: 100000;
+  animation-duration: 3.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
 .fade-out{
   visibility: hidden;
   opacity: 0;
@@ -1440,6 +1590,23 @@ main{
   visibility: hidden;
   opacity: 0;
   transform: perspective(500px) rotate3d(2, 0, 0, 90deg);
+}
+
+@keyframes showModalText{
+  0%{
+    visibility: hidden;
+    opacity: 0;
+  }
+  
+  20%{
+    visibility: visible;
+    opacity: 1;
+  }
+
+  100%{
+    visibility: hidden;
+    opacity: 0;
+  }
 }
 
 @keyframes fromLeft{

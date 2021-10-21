@@ -197,7 +197,7 @@ const $msg = document.createElement("div");
 $formContainer.addEventListener("submit",(e) => {
   e.preventDefault();
 
-  fetch("https://formsubmit.co/ajax/donimen@gmail.com",{
+  fetch("https://formsubmit.co/ajax/adonismendozacontact@gmail.com",{
     method: "POST",
     body: new FormData(e.target)
   })

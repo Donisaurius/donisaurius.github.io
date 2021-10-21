@@ -202,9 +202,11 @@ $formContainer.addEventListener("submit",(e) => {
     body: new FormData(e.target)
   })
   .then(respuesta => {
-    return respuesta.ok 
-    ? respuesta.json()
-    : Promise.reject(respuesta);
+    if(respuesta.ok){
+      respuesta.json();
+    }else{
+      Promise.reject(respuesta);
+    }
   })
   .then(json => {
     console.log(json);

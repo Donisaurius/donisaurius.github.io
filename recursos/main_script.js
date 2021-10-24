@@ -213,7 +213,7 @@ $formContainer.addEventListener("submit",(e) => {
     /* Hacer otras cosas */
     $msg.textContent = "Me contactaré contigo pronto.";
     $msg.style.display = "flex";
-    $msg.classList.add(contact-response-container)
+    $msg.classList.add("contact-response-container")
     $formContainer.reset();
     document.body.insertAdjacentElement("afterbegin",$msg)
   })

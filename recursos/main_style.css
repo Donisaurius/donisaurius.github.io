@@ -1552,6 +1552,47 @@ main{
   z-index: 100000;
 }
 
+#loaderContainer svg{
+  stroke: #00cb97;
+  stroke-width: 3px;
+  height: 3rem;
+  width: 3rem;
+  animation: loader 3s infinite linear;
+}
+
+#loaderContainer span{
+  font-weight: bold;
+  text-shadow: 0 0 10px #00cb97;
+}
+
+#loaderContainer svg line:nth-child(1){
+  stroke: #0ba1ff;
+}
+
+#loaderContainer svg line:nth-child(8){
+  stroke: #0a75b8;
+}
+
+#loaderContainer svg line:nth-child(6){
+  stroke: #085d92;
+}
+
+#loaderContainer svg line:nth-child(4){
+  stroke: #053f63;
+}
+
+#loaderContainer svg line:nth-child(2){
+  stroke: #004736;
+}
+
+#loaderContainer svg line:nth-child(7){
+  stroke: #002c22;
+}
+
+#loaderContainer svg line:nth-child(5){
+  stroke: #00ffbf;
+}
+
 .tapLeftRight{
   display: none;
 }
@@ -1590,6 +1631,12 @@ main{
   visibility: hidden;
   opacity: 0;
   transform: perspective(500px) rotate3d(2, 0, 0, 90deg);
+}
+
+@keyframes loader{
+  100%{
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes showModalText{

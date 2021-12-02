@@ -305,3 +305,50 @@ if(innerWidth < 1000){
   let watchSlider = new IntersectionObserver(watchingSlider,observersOptions)
   watchSlider.observe($sliderContainer)
 }
+
+let lines = document.querySelectorAll(".lines div"),
+  techsImg = document.querySelector(".techs-imgs"),
+  techImages = document.querySelectorAll(".techs-imgs img");
+
+const heroAnimation = () => {
+  setInterval(() => {
+    lines.forEach(line => {
+      let random = Math.floor(Math.random()*100);
+      line.style.height = `${random}%`;
+    })
+  }, 500);
+}
+
+const visibleTechImages = () => {
+  let contador = 0,
+  interval = setInterval(() => {
+    techImages[contador].classList.add("visible");
+    techImages[contador].style.animationName = "lightning";
+    techImages[contador].style.animationIterationCount = "1";
+    techImages[contador].style.animationDuration = "1.5s";
+    techImages[contador].style.animationTimingFunction = "ease";
+    techImages[contador].style.animationFillMode = "forwards";
+    contador++;
+    if(contador === techImages.length){
+      console.log("Limpio");
+      rotate3d();
+      clearInterval(interval)
+    } 
+  }, 1000);
+}
+
+const rotate3d = () => {
+  techsImg.style.animationName = "rotate3d";
+}
+
+document.addEventListener("animationend",e => {
+  if(e.target.matches(".proob")){
+    visibleTechImages();
+  }
+})
+
+document.addEventListener("animationstart", e => {
+  if(e.target.matches(".techs-imgs")){
+    heroAnimation();
+  }
+})

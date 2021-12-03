@@ -308,18 +308,22 @@ if(innerWidth < 1000){
 
 let lines = document.querySelectorAll(".lines div"),
   techsImg = document.querySelector(".techs-imgs"),
-  techImages = document.querySelectorAll(".techs-imgs img");
+  techImages = document.querySelectorAll(".techs-imgs img"),
+  linesContainer = document.querySelector(".lines");
 
-const heroAnimation = () => {
+const linesAnimation = () => {
   setInterval(() => {
     lines.forEach(line => {
-      let random = Math.floor(Math.random()*100);
-      line.style.height = `${random}%`;
+      let random = Math.floor(Math.random()*50),
+      bottomPoints = 100 - random;
+
+      line.style.clipPath = `polygon(0% ${random}%, 100% ${random}%, 100% ${bottomPoints}%, 0% ${bottomPoints}%)`;
+
     })
   }, 500);
 }
 
-const visibleTechImages = () => {
+/* const visibleTechImages = () => {
   let contador = 0,
   interval = setInterval(() => {
     techImages[contador].classList.add("visible");
@@ -339,16 +343,19 @@ const visibleTechImages = () => {
 
 const rotate3d = () => {
   techsImg.style.animationName = "rotate3d";
-}
+} */
 
-document.addEventListener("animationend",e => {
+/* document.addEventListener("animationend",e => {
   if(e.target.matches(".proob")){
     visibleTechImages();
   }
-})
+}) */
 
-document.addEventListener("animationstart", e => {
-  if(e.target.matches(".techs-imgs")){
-    heroAnimation();
+document.addEventListener("animationend", e => {
+  console.log(e)
+
+  if(e.target.matches(".presentacion")){
+    linesAnimation();
   }
+
 })

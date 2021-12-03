@@ -963,12 +963,30 @@ main{
 
 @media screen and (min-width:1000px){
   a,button{
-    font-size: 1.6rem;
+    font-size: 1rem;
+  }
+
+  .admr{
+    border-bottom: none;
+    height: 5.8vh;
+  }
+
+  .admr img{
+    left: initial;
+    width: 70px;
+  }
+
+  .cabecera{
+    flex-direction: row;
   }
 
   .background{
    background-position: -10rem 0;
    background-attachment: fixed;
+  }
+
+  .botonera{
+    height: 5.8vh;
   }
 
   .botonera_lista{
@@ -990,11 +1008,13 @@ main{
   }
 
   .stack_items{
+    width: 200%;
     justify-content: end;
+    transform: translateX(-150%);
   }
 
   .stack:hover .stack_items{
-    transform: translateX(0);
+    transform: translateX(-50%);
   }
 
   .proyecto-header{
@@ -1068,56 +1088,25 @@ main{
 
   .presentacion{
     align-items: center;
-    background: var(--bg-alpha-color);
     display: flex;
     justify-content: center;
     height: 40%;
-    width: 60%;
-    clip-path: circle(10% at 50% 50%);
-    animation: titleAnimation 8s 1 forwards linear;
-  }
-  
-  @keyframes titleAnimation{
-    0%{
-      clip-path: circle(8% at 50% 38%);
-    }
-    20%{
-      /* background: transparent; */
-      clip-path: circle(12% at 50% 38%);
-    }
-    40%{
-      /* background: transparent; */
-      clip-path: circle(4% at 50% 38%);
-    }
-    60%{
-      /* background: transparent; */
-      clip-path: circle(20% at 50% 38%);
-    }
-    80%{
-      /* background: transparent; */
-      clip-path: circle(2% at 50% 50%);
-    }
-    100%{
-      background: transparent;
-      clip-path: circle(80% at 50% 50%);
-    }
+    width: 100%;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 40%, 0% 40%);
+    z-index: 1;
+    animation: presentacionAnimation 2s 1s forwards ease-out;
   }
   
   .presentacion h1{
     font-size: 3rem;
-    text-shadow: 0 0 20px #222;
+    text-shadow: 0 0 5px var(--bg-color);
   }
-/* 
-  .mask{
-    align-items: center;
-    background: #fff;
-    justify-content: center;
-    display: flex;
-    width: 60%;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-  } */
+  
+  @keyframes presentacionAnimation{
+    100%{
+      clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+  }
 
   .proob{
     display: grid;
@@ -1128,23 +1117,40 @@ main{
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     opacity: 1;
-    height: 100vh;
-    width: 40%;
+    overflow: hidden;
+    height: 30vh;
+    width: 50%;
     transform: translate(0,0);
+    position: absolute;
   }
 
   .lines{
+    align-items: flex-start;
     display: flex;
-    align-items: flex-end;
-    height: 100%;
+    height: 40%;
     width: 100%;
+    clip-path: polygon(50% 0%, 50% 0%, 50% 100%, 50% 100%);
+    position: relative;
+    animation: barApear 2s 1s forwards ease-out;
+    transition: all 2s ease-out;
+  }
+  
+  @keyframes barApear{
+    100%{
+      clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
   }
 
   .lines div{
     flex-grow: 1;
     flex-shrink: 1;
-    height: 5%;
-    transition: all .5s ease-in-out;
+    height: 100%;
+    clip-path: polygon(0% 45%, 100% 45%, 100% 55%, 0% 55%);
+    transition: all .5s ease-in;
+  }
+  
+  .lines div:nth-child(1){
+    clip-path: polygon(0% 45%, 100% 45%, 100% 55%, 0% 55%);
   }
 
   .lines div:nth-child(odd){
@@ -1152,16 +1158,8 @@ main{
     transition: all .5s ease;
   }
 
-  .lines div:nth-child(odd):hover{
-    background: var(--second-color);
-  }
-
   .lines div:nth-child(even){
     background: #00cb988c;
-  }
-
-  .lines div:nth-child(even):hover{
-    background: var(--third-color);
   }
 
   .techs-imgs{
@@ -1211,7 +1209,7 @@ main{
     transform: scale(1.2);
   }
 
-  @keyframes rotate3d {
+  /* @keyframes rotate3d {
     0%{
       transform: rotate3d(1,1,1,360deg);
     }
@@ -1249,7 +1247,7 @@ main{
       opacity: 1;
       transform: translate(0,0);
     }
-  }
+  } */
 
 }
 

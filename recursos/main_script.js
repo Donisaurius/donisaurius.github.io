@@ -355,6 +355,8 @@ document.addEventListener("animationend", e => {
   console.log(e)
 
   if(e.target.matches(".presentacion")){
+    document.querySelector(".presentacion").style.background = "rgba(0,0,0,0.1)";
+    document.querySelector(".presentacion").style.boxShadow = "inset 0px 0px 20px 0px #ffffff70";
     linesAnimation();
   }
 

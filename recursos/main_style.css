@@ -33,6 +33,11 @@ html{
   src: url(../tipografias/TypoGraphica_titles.otf);
 }
 
+@font-face{
+  font-family: "hero-font";
+  src: url(../tipografias/Oxygen-Regular.ttf);
+}
+
 /* ------------Styles---------------- */
 
 
@@ -53,7 +58,6 @@ a,button{
 
 .admr{
   align-items: center;
-  background: #04456ec7;
   border-bottom: 1px solid var(--third-color);
   display: grid;
   font-size: 14vw;
@@ -87,7 +91,6 @@ a,button{
 }
 
 .botonera{
-  background-color: #04456ec7;
   grid-row: 2/3;
   height: 100%;
   width: 100%;
@@ -139,6 +142,7 @@ a,button{
 
 .cabecera{
   align-items: center;
+  background: rgba(4, 69, 110, 0.24);
   display: flex;
   flex-direction: column;
   font-family: var(--title-font);
@@ -416,11 +420,13 @@ main{
   background-attachment: fixed;
   height: 100vh;
   width: 100%;
+  clip-path: polygon(100% 0%, 100% 90%, 50% 99%, 0% 90%, 0% 0%);
 }
 
 .hero_presentacion{
   align-items: center;
   background-color: var(--bg-alpha-color);
+  clip-path: polygon(100% 0%, 100% 90%, 50% 99%, 0% 90%, 0% 0%);
   justify-content: center;
   font-size: 5vw;
   display: flex;
@@ -534,6 +540,12 @@ main{
   width: 60%;
 }
 
+.presentacion h1{
+  font-family: hero-font;
+  font-size: 8vw;
+  color: #222;
+}
+
 .proyectos-container{
   display: grid;
   grid-template-rows: repeat(2,auto);
@@ -623,12 +635,13 @@ main{
 
 .stack_items{
   align-items: flex-end;
-  background:-webkit-radial-gradient(left,circle,#04456e3f,#04456ebd);
+  background:rgba(4, 69, 110, 0.24);
   display: grid;
   grid-template-rows: repeat(4,auto);
   height: auto;
   justify-content: center;
   left: 0;
+  top:100%;
   position: absolute;
   transform: translateX(-100%);
   transition: transform .5s ease;
@@ -967,29 +980,35 @@ main{
   }
 
   .admr{
+    background: transparent;
     border-bottom: none;
     height: 5.8vh;
   }
-
+  
   .admr img{
     left: initial;
+    margin-left: .5rem;
     width: 70px;
   }
 
   .cabecera{
     flex-direction: row;
+    background: rgba(4, 69, 110, 0.24);
   }
 
   .background{
    background-position: -10rem 0;
    background-attachment: fixed;
+   clip-path: polygon(100% 0%, 100% 90%, 50% 99%, 0% 90%, 0% 0%);
   }
-
+  
   .botonera{
+    background: transparent;
     height: 5.8vh;
   }
 
   .botonera_lista{
+    color: var(--dark-content-color);
     flex-direction: row-reverse;
     justify-content: flex-start;
     align-items: center;
@@ -1003,6 +1022,18 @@ main{
     margin-right: .5rem;
   }
 
+  .botonera_lista-items, .stack_items {
+    color: initial;
+  }
+  
+  .menu-btn {
+    color: initial;
+  }
+
+  .stack_items {
+    background: transparent;
+  }
+
   .hamburger-btn-container{
     display: none;
   }
@@ -1011,6 +1042,10 @@ main{
     width: 200%;
     justify-content: end;
     transform: translateX(-150%);
+  }
+
+  .stack_items li {
+    color: initial;
   }
 
   .stack:hover .stack_items{
@@ -1084,23 +1119,28 @@ main{
 
   .hero_presentacion{
     flex-direction: row;
+    clip-path: polygon(100% 0%, 100% 90%, 50% 99%, 0% 90%, 0% 0%);
   }
 
   .presentacion{
     align-items: center;
+    background: none;
+    box-shadow: initial;
     display: flex;
     justify-content: center;
     height: 30%;
-    width: 50%;
+    width: 60%;
     clip-path: polygon(0% 0%, 100% 0%, 100% 40%, 0% 40%);
     z-index: 1;
     transition: all .5s ease-out;
     animation: presentacionAnimation 2s 1s forwards ease-out;
+    filter: saturate(100%);
   }
   
   .presentacion h1{
+    font-family: hero-font;
     font-size: 3rem;
-    text-shadow: 0 0 5px var(--bg-color);
+    color: #222;
   }
   
   @keyframes presentacionAnimation{
@@ -1122,6 +1162,7 @@ main{
     height: 30vh;
     width: 50%;
     transform: translate(0,0);
+    filter: blur(5px) contrast(100%) saturate(100%);
     position: absolute;
   }
 
@@ -1158,7 +1199,7 @@ main{
     background: #04456e8c;
     transition: all .5s ease;
   }
-
+  
   .lines div:nth-child(even){
     background: #00cb988c;
   }
@@ -1516,7 +1557,7 @@ main{
   }
 
   .cabecera{
-    height: 25vh;
+    height: 10vh;
   }
 
   .certificados{
@@ -1633,6 +1674,10 @@ main{
     font-size: 6vw;
     letter-spacing: .5rem;
     text-align: center;
+  }
+
+  .hero_presentacion h1{
+    font-size: 3rem;
   }
 
   .html_contenido{

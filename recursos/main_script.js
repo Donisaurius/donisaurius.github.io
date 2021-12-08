@@ -28,14 +28,16 @@ document.addEventListener("click", (e) => {
   if(e.target.matches(`.${$menuBtn.className}`)) menuStack();
   if(e.target.matches(`.${$hamburgerBtn.className}`)) menuStack();
 
-  const listaItems = document.querySelectorAll(".slider-item")
+  const listaItems = document.querySelectorAll(".slider-item");
+
+  let sliderContainer = e.target.closest(".proyecto-slider-container") || false;
 
   if(innerWidth < 1000){
-    if(e.path[3].className === "proyecto-slider-container"){
+    if(sliderContainer.className === "proyecto-slider-container"){
    
       let coorX = e.x;
   
-      let left_or_right = (e.path[3].clientWidth) / 2;
+      let left_or_right = (sliderContainer.clientWidth) / 2;
   
       if(coorX < left_or_right){
         /* Para ir a la izquierda */
@@ -352,11 +354,9 @@ const rotate3d = () => {
 }) */
 
 document.addEventListener("animationend", e => {
-  console.log(e)
+  /* console.log(e) */
 
   if(e.target.matches(".presentacion")){
-    document.querySelector(".presentacion").style.background = "rgba(0,0,0,0.1)";
-    document.querySelector(".presentacion").style.boxShadow = "inset 0px 0px 20px 0px #ffffff70";
     linesAnimation();
   }
 

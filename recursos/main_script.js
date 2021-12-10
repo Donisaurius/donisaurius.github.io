@@ -1,9 +1,7 @@
 const $formBtn = document.querySelector(".formulario-btn"),
   $form = document.querySelector(".formulario"),
-  $closeFormBtn = document.querySelector(".close-form-btn"),
-  $menuBtn = document.querySelector(".menu-btn"),
+  $closeFormBtn = document.querySelector(".close-form-btn")
   $hamburgerBtn = document.querySelector(".hamburger-btn"),
-  $menu = document.querySelector(".stack_items"),
   $stackItems = document.querySelectorAll(".items"),
   $footer = document.querySelector("footer"),
   $cabecera = document.querySelector(".cabecera");
@@ -18,14 +16,9 @@ const closeForm = () => {
   $formBtn.style.display = "block"
 }
 
-const menuStack = () => {
-  $menu.classList.toggle("stack_items-active");
-}
-
 document.addEventListener("click", (e) => {
   if(e.target.matches(`.${$formBtn.className}`)) formContact();
   if(e.target.matches(`.${$closeFormBtn.className}`)) closeForm();
-  if(e.target.matches(`.${$menuBtn.className}`)) menuStack();
   if(e.target.matches(`.${$hamburgerBtn.className}`)) menuStack();
 
   const listaItems = document.querySelectorAll(".slider-item");
@@ -128,65 +121,70 @@ document.addEventListener("click", (e) => {
       }
     }
   } 
+
+  if(e.target.matches(".certificados-card-img > img")){
+    /* e.target.classList.add(".img-active"); */
+    e.target.classList.toggle("img-active")
+  }
   
 })
 
 
 /* ------animation stack images-------- */
 
-const $stackImgs = document.querySelectorAll(".articulos_contenedor > article > figure")
-
 const observersOptions = {
   threshold: [0.2,0.8]
 }
 
+const animationStackImg = () => {
+
+  const $stackImgs = document.querySelectorAll(".stack-card-container");
+  
   const callbk1 = (entries) => {
     entries.forEach(entry => {
       if(entry.isIntersecting){
-        entry.target.style.animationName = "fromLeft"
+        entry.target.style.animationName = "fromLeft";
+        /* console.log(entry) */
       }
     })
   }
+    
+  const observer1 = new IntersectionObserver(callbk1,observersOptions);
   
-  const observer1 = new IntersectionObserver(callbk1,observersOptions)
-
   const callbk2 = (entries) => {
     entries.forEach(entry => {
       if(entry.isIntersecting){
-        entry.target.style.animationName = "fromRight"
+        entry.target.style.animationName = "fromRight";
+        /* console.log(entry) */
       }
     })
   }
+    
+  const observer2 = new IntersectionObserver(callbk2,observersOptions);
   
-  const observer2 = new IntersectionObserver(callbk2,observersOptions)
-
   let cont = 0;
-
+  
   $stackImgs.forEach(img => {
-
+  
     if(innerWidth >= 700 && innerWidth < 1290){
-      observer1.observe(img)
+      observer1.observe(img);
     }else{
       if(cont % 2 === 0){
-          observer1.observe(img)
+          observer1.observe(img);
       }else{
-          observer2.observe(img)
+          observer2.observe(img);
       }
       cont++
     }
   })
+}
+
 
 /* ----------Out menu------------ */
 
 document.addEventListener("DOMContentLoaded",() => {
-  $stackItems.forEach(item => {
-    item.addEventListener("click",e => {
-      if(e.target.className === item.className){
-        $menu.classList.remove("stack_items-active");
-      }
-    })
-  })
-
+  creatingCards();
+  animationStackImg();
 })
 
 /* -------Form loader-------------- */
@@ -361,3 +359,93 @@ document.addEventListener("animationend", e => {
   }
 
 })
+
+const $templateCard = document.getElementById("templateCard").content,
+  $templateCertificate = document.getElementById("certificadosCard").content,
+  $fragmentCard = document.createDocumentFragment(),
+  $stackContainer = document.querySelector(".stack_contenedor"),
+  $certificatesContainer = document.querySelector(".certificados-contenedor");
+
+const stackData = [
+  {
+    name: "Html",
+    imgUrl: "./imagenes/HTML_Logo.svg",
+    progressPercent: "80%",
+    level: "High"
+  },
+  {
+    name: "Css",
+    imgUrl: "./imagenes/CSS_Logo.svg",
+    progressPercent: "80%",
+    level: "Med"
+  },
+  {
+    name: "JavaScript",
+    imgUrl: "./imagenes/JS_Logo.svg",
+    progressPercent: "85%",
+    level: "Med"
+  },
+  {
+    name: "Git",
+    imgUrl: "./imagenes/git_Logo.svg",
+    progressPercent: "75%",
+    level: "Med"
+  },
+  {
+    name: "React JS",
+    imgUrl: "./imagenes/React_Logo.png",
+    progressPercent: "15%",
+    level: "Basic"
+  }
+]
+
+const certificatesData = [
+  {
+    imgUrl: "./imagenes/Certificado_CSS.png",
+    name: "Css",
+    by: "Educa2"
+  },
+  {
+    imgUrl: "./imagenes/Certificado_js.png",
+    name: "JavaScript",
+    by: "Educa2"
+  }
+]
+
+const creatingCards = () => {
+  stackData.forEach(tech => {
+    let clon = $templateCard.cloneNode(true),
+      $container = clon.querySelector(".stack-card-container"),
+      $img = $container.querySelector(".stack-card-img > img"),
+      $progress = $container.querySelector(".progress-bar"),
+      $level = $container.querySelector(".stack-progress-level p");
+  
+    $img.src = tech.imgUrl;
+    $img.alt = tech.name;
+    $progress.style.width = tech.progressPercent;
+    $level.textContent+= tech.level;
+    $fragmentCard.append($container);
+  })
+
+  $stackContainer.append($fragmentCard);
+
+  /* -------Certificates */
+
+  certificatesData.forEach(cert => {
+    let clon = $templateCertificate.cloneNode(true),
+    $img = clon.querySelector(".certificados-card-img img"),
+    $techName = clon.querySelector(".certificados-card-info-tech-name"),
+    $by = clon.querySelector(".certificados-card-info-tech-by > strong");
+
+    $img.src = cert.imgUrl;
+    $img.alt = `${cert.name} certificate`;
+    $techName.textContent = cert.name;
+    $by.textContent = cert.by;
+    $fragmentCard.append(clon);
+  })
+
+  $certificatesContainer.append($fragmentCard);
+}
+
+/* --------------------------- */
+

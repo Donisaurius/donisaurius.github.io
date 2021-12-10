@@ -29,14 +29,8 @@
     </div>
     <nav class="botonera">
       <ul class="botonera_lista">
-        <li class="botonera_lista-items stack">
-          <button class="menu-btn">STACK</button>
-          <ul class="stack_items">
-            <li class="items"><a class="items" href="#html">HTML</a></li>
-            <li class="items"><a class="items" href="#css">CSS</a></li>
-            <li class="items"><a class="items" href="#js">JavaScript</a></li>
-            <li class="items"><a class="items" href="#git">Git</a></li>
-          </ul>
+        <li class="botonera_lista-items">
+          <a href="#stack" class="menu-btn">STACK</a>
         </li>
         <li class="botonera_lista-items"><a href="#redes_sociales">SOCIAL MEDIA</a></li>
         <li class="botonera_lista-items"><a href="#proyectos">PROJECTS</a></li>
@@ -99,79 +93,41 @@
     </button>
   </div>
   <main>
-    <section class="articulos_contenedor">
-      <article id="html" class="html" data-article-sin-certificado>
-        <figure class="html_imagen hidden">
-          <img src="imagenes/HTML_Logo.svg" alt="">
-        </figure>
-        <article class="html_contenido">
-          <h2>HTML</h2>
-          <p>
-            <strong>Hypertext markup languague</strong> es el lenguaje de marcado de la web. Es utilizado para dar informacion a las paginas o sitios en la red.
-            Manejo conceptos en:
-          </p>
-          <ul>
-            <li>HTML semantico</li>
-            <li>Formularios</li>
-            <li>Multimedia</li>
-            <li>Searching Engine Optimization <strong>(SEO)</strong></li>
-          </ul>
-        </article>
-      </article>
-      <article id="css" class="css" data-article-con-certificado>
-        <figure class="css_imagen hidden">
-          <img src="imagenes/CSS_Logo.svg" alt="">
-        </figure>
-        <article class="css_contenido">
-          <h2>CSS</h2>
-          <p>Cascading Styles Sheets es el lenguaje utilizado para darle una mejor apariencia a las paginas webs. Poseo conocimientos en: </p>
-          <ul>
-            <li>Maquetacion con <strong>Flexbox</strong> y <strong>Grid</strong></li>
-            <li>MediaQueries para la adaptación de la pagina en distintas resoluciones</li>
-            <li>Transiciones</li>
-            <li>Animaciones</li>
-          </ul>
-        </article>
-        <article class="css_certificado certificados">
-          <h2>Certificado en CSS</h2>
-          <h3>Otorgado por Alexanyer Naranjo</h3>
-          <h4>CEO de Educa2</h4>
-          <figure class="css_certificado_img-cont">
-            <img src="imagenes/Certificado_CSS.png" alt="Certificado de Css" title="Certificado de Css"/>
+    <section class="stack_contenedor" id="stack">
+      <header class="stack_title">
+        <h2>Technologies</h2>
+      </header>
+      <template id="templateCard">
+        <div class="stack-card-container">
+          <figure class="stack-card-img">
+            <img src="" alt="">
           </figure>
-        </article>
-      </article>
-      <article class="js" id="js" data-article-con-certificado>
-        <figure class="js_imagen hidden">
-          <img src="imagenes/JS_Logo.svg" alt="JavaScript">
-        </figure>
-        <article class="js_contenido">
-          <h2>JavaScript</h2>
-          <p>Tengo conocimientos en: </p>
-          <ul>
-            <li>Manejo funcional de los <strong>Arrays</strong>, y sus metodos.</li>
-            <li><strong>P.O.O</strong> manejo de clases basadas en funciones prototípicas, y su moderna sintaxis de azucar sintáctica <em>Class</em>.</li>
-            <li>Manejo del <strong>D.O.M</strong>, y del <strong>B.O.M</strong></li>
-          </ul>
-        </article>
-        <article class="js_certificado certificados">
-          <h2>Certificado en JavaScript</h2>
-          <h3>Otorgado por Alexanyer Naranjo</h3>
-          <h4>CEO de Educa2</h4>
-          <figure class="js_certificado_img-cont">
-            <img src="imagenes/certificado_js.png" alt="Certificado de JS" title="Certificado de JS"/>
+          <div class="stack-progress-bar">
+            <span class="progress-bar"></span>
+          </div>
+          <div class="stack-progress-level">
+            <p>Level: </p>
+          </div>
+        </div>
+      </template>
+    </section>
+    <section class="certificados-contenedor">
+      <header class="certificados-title">
+        <h2>Certificados</h2>
+      </header>
+      <template id="certificadosCard">
+        <div class="certificados-card-container">
+          <figure class="certificados-card-img">
+            <img src="" alt="">
           </figure>
-        </article>
-      </article>
-      <article id="git" class="git" data-article-sin-certificado>
-        <figure class="git_imagen hidden">
-          <img src="imagenes/git_Logo.svg" alt="Git">
-        </figure>
-        <article class="git_contenido">
-          <h2>GIT</h2>
-          <p>Poseo un conocimiento intermedio con este sistema de control de versiones. Manejo su integración con <em>Visual Studio Code</em>, además de cómo complementarlo con <strong>GitHub</strong>.</p>
-        </article>
-      </article>
+          <div class="certificados-card-info">
+            <p class="certificados-card-info-tech-name"></p>
+            <p class="certificados-card-info-tech-by">Gave by: 
+              <strong></strong>
+            </p>
+          </div>
+        </div>
+      </template>
     </section>
     <section class="proyectos-container" id="proyectos">
       <header class="proyectos-container-header">

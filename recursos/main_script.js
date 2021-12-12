@@ -160,7 +160,7 @@ const $templateCard = document.getElementById("templateCard").content,
   $fragmentCard = document.createDocumentFragment(),
   $stackContainer = document.querySelector(".stack-cards"),
   $certificatesContainer = document.querySelector(".certificados");
-
+  
 const stackData = [
   {
     name: "Html",

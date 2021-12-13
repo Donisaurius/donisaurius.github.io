@@ -201,7 +201,7 @@ const certificatesData = [
     by: "Educa2"
   },
   {
-    imgUrl: "./imagenes/Certificado_js.png",
+    imgUrl: "./imagenes/certificado_js.png",
     name: "JavaScript",
     by: "Educa2"
   }

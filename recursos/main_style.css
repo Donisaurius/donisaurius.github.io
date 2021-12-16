@@ -328,7 +328,6 @@ main > section > header{
   background-image: url("../imagenes/Bg_Tech.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: -30rem 0;
   background-attachment: fixed;
   height: 100vh;
   width: 100%;
@@ -690,7 +689,6 @@ main > section > header{
   }
 
   .background{
-   background-position: -10rem 0;
    background-attachment: fixed;
    clip-path: polygon(100% 0%, 100% 90%, 50% 99%, 0% 90%, 0% 0%);
   }

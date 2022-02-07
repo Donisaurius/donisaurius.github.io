@@ -465,8 +465,8 @@ const PROJECTS_DATA = [
     title: "Note-calories",
     description: "Note-calories is a web app created for try to control the calories that people eat at day. You just need to put the food's name, the food's weight, and the food's cals. This app doesn't show how many calories are in your food when you put in, you have to know how many cals you're eating. With Note-calories you control the consume at day.",
     techs: "<strong><em>HTML</em></strong>, <strong><em>CSS</em></strong> and <strong><em>JavaScript</em></strong>.",
-    repoURL: "https://github.com/Donisaurius/Note-callories",
-    projectUrl: "https://donisaurius.github.io/note-callories",
+    repoURL: "https://github.com/Donisaurius/noteCalories",
+    projectUrl: "https://donisaurius.github.io/noteCalories/",
     projectId: "noteCal",
     imgs: [
       {

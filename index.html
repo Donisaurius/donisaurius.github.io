@@ -72,8 +72,10 @@
   </div>
 </div>
   <section class="formulario">
-    <form class="formulario-container" action="#" method="get">
-      <textarea name="contacto" cols="30" rows="10" class="contactame" value="none" placeholder="¡Escribeme!"></textarea>
+    <form class="formulario-container">
+      <input name="nombre" type="text" class="contactame" placeholder="¿Cómo te llamas?" required/>
+      <input name="email" type="email" class="contactame" placeholder="¿Cual es tu direccion de correo electronico?" required/>
+      <textarea name="mensaje" cols="30" rows="10" class="contactame" value="none" placeholder="¡Escribeme!"></textarea>
       <input type="submit" value="ENVIAR"/>
     </form>
     <button class="close-form-btn">

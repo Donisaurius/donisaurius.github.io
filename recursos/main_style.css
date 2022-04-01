@@ -60,7 +60,6 @@ a,button{
 
 .admr{
   align-items: center;
-  border-bottom: 1px solid var(--third-color);
   display: grid;
   font-size: 14vw;
   grid-row: 1/2;
@@ -203,20 +202,21 @@ a,button{
 }
 
 .formulario{
-  background: var(--bg-alpha-color);
-  border: 2px outset var(--third-color);
+  background: #dddddd73;
   border-radius: 5px;
   display: grid;
   font-family: var(--content-regular-font);
   grid-template-columns: 80% 20%;
   height: 25rem;
-  left: calc(50% - 12.5rem);
+  left: calc(50% - 9rem);
   position: fixed;
-  top: calc(50% - 12.5rem);
-  width: 25rem;
+  top: calc(50% - 10rem);
+  width: 18rem;
   transform: scale(0);
   transition: transform .3s ease-out;
   z-index: 9999;
+  backdrop-filter: blur(6px);
+  box-shadow: 0px 13px 20px 0px #23232359;
 }
 
 .formulario-active{
@@ -228,63 +228,58 @@ a,button{
   grid-template-rows: 15% 15% 50% 20%;
   height: 100%;
   width: 100%;
-  padding: 1rem 0;
+}
+
+.formulario-container > input, .formulario-container > textarea{
+  align-self: center;
+  background: transparent;
+  border: none;
+  border-bottom: 4px solid var(--third-color);
+  border-radius: 5px;
+  color: #111;
+  font-size: 1rem;
+  font-weight: bold;
+  justify-self: center;
+  outline: none;
+  padding: .6rem .2rem;
+  margin-top: .5rem;
+  resize: none;
+  transition: all .2s ease;
+  width: 90%;
 }
 
 .formulario-container textarea{
   grid-row: 3/4;
-  align-self: center;
-  background: var(--bg-color);
-  border: 1px solid var(--third-color);
-  border-radius: 5px;
-  color: var(--dark-content-color);
-  font-size: 1rem;
-  height: 95%;
-  justify-self: center;
-  outline: none;
-  padding: 1rem;
-  resize: none;
-  transition: border .5s ease, box-shadow .5s ease;
-  width: 95%;
+  height: 80%;
 }
 
-.formulario-container input[type="text"], .formulario-container input[type="email"], .formulario-container input[type="submit"]{
-  align-self: center;
-  border: none;
-  background: var(--bg-color);
-  border-radius: 5px;
-  border: 1px solid var(--third-color);
-  color: var(--dark-content-color);
-  justify-self: center;
-  transition: background .5s ease, color .5s ease;
-  height: 90%;
-  width: 95%;
-  padding: .5rem;
+.formulario-container > input::placeholder{
+  color: #444;
+  font-size: .8rem;
 }
 
-.formulario-container input::placeholder{
-  color: var(--dark-content-color);
-}
-
-.formulario-container textarea::placeholder{
-  color: var(--dark-content-color);
+.formulario-container > textarea::placeholder{
+  color: #444;
+  font-size: .8rem;
 }
 
 .formulario-container textarea:focus, .formulario-container input:focus{
-  border: 1px solid var(--second-color);
-  box-shadow: 0 0 1rem var(--second-color);
-  outline: none;
+  border-bottom: 4px solid var(--second-color);
 }
 
-.formulario-container input[type="submit"]{
+.formulario-container > input[type="submit"]{
   cursor: pointer;
   background: var(--third-color);
   grid-row: 4/5;
   height: 50%;
   width: 30%;
+  transition: all .2s ease;
+  padding: 0.6rem;
+  border: none;
+  margin-top: 0;
 }
 
-.formulario-container input[type="submit"]:hover{
+.formulario-container > input[type="submit"]:hover{
   background: var(--second-color);
   color: var(--light-content-color);
 }
@@ -345,9 +340,7 @@ main > section > header{
 .background{
   display: grid;
   background-image: url("../imagenes/Bg_Tech.jpg");
-  background-repeat: no-repeat;
   background-size: cover;
-  background-position: -30rem 0;
   background-attachment: fixed;
   height: 100vh;
   width: 100%;
@@ -1022,7 +1015,7 @@ main > section > header{
 
 }
 
-@media screen and (orientation:landscape) and (max-width:812px){
+@media screen and (orientation:landscape) and (max-width:900px){
   .admr{
     display: none;
   }
@@ -1085,6 +1078,10 @@ main > section > header{
 
   .repo{
     margin-top: 2rem;
+  }
+
+  .formulario{
+    top: 0;
   }
   
 }

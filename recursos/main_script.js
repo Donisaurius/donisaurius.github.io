@@ -515,6 +515,35 @@ const PROJECTS_DATA = [
         title: "Dots game imagen número 3"
       }
     ]
+  },
+  {
+    title: "The web news",
+    description: "This is a web page that I made for a test. This was for proof my abilities with <strong><em>HTML</em></strong>, <strong><em>CSS</em></strong> and <strong><em>JavaScript</em></strong> making layouts. This is <strong>Responsive</strong> and the details of news are <strong>asynchronous</strong>.",
+    repoURL: "#",
+    projectUrl: "https://adonismendoza.000webhostapp.com/",
+    projectId: "webNews",
+    imgs: [
+      {
+        src: "./imagenes/proyecto4_img1.png",
+        alt: "The web news imagen número 1",
+        title: "The web news imagen número 1"
+      },
+      {
+        src: "./imagenes/proyecto4_img2.png",
+        alt: "The web news imagen número 2",
+        title: "The web news imagen número 2"
+      },
+      {
+        src: "./imagenes/proyecto4_img3.png",
+        alt: "The web news imagen número 3",
+        title: "The web news imagen número 3"
+      },
+      {
+        src: "./imagenes/proyecto4_img4.png",
+        alt: "The web news imagen número 4",
+        title: "The web news imagen número 4"
+      }
+    ]
   }
 ]
 

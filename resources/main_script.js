@@ -527,6 +527,66 @@ const PROJECTS_DATA = [
         title: "Dots game imagen número 3"
       }
     ]
+  },
+  {
+    title: "The web news",
+    description: "This is a web page that I made for a test. This was for proof my abilities with <strong><em>HTML</em></strong>, <strong><em>CSS</em></strong> and <strong><em>JavaScript</em></strong> making layouts. This is <strong>Responsive</strong> and the details of news are <strong>asynchronous</strong>.",
+    techs: "<strong><em>HTML</em></strong>, <strong><em>CSS</em></strong> and <strong><em>JavaScript</em></strong>.",
+    repoURL: "#",
+    projectUrl: "https://adonismendoza.000webhostapp.com/",
+    projectId: "webNews",
+    imgs: [
+      {
+        src: "./images/proyecto4_img1.png",
+        alt: "The web news imagen número 1",
+        title: "The web news imagen número 1"
+      },
+      {
+        src: "./images/proyecto4_img2.png",
+        alt: "The web news imagen número 2",
+        title: "The web news imagen número 2"
+      },
+      {
+        src: "./images/proyecto4_img3.png",
+        alt: "The web news imagen número 3",
+        title: "The web news imagen número 3"
+      },
+      {
+        src: "./images/proyecto4_img4.png",
+        alt: "The web news imagen número 4",
+        title: "The web news imagen número 4"
+      }
+    ]
+  },
+  {
+    title: "Stared Lyrics",
+    description: "This is a web app where you can find the lyrics of your favorite songs. Let's sing! This is made with CodeSandBox. There you can see the source code. I made this app for practice my skills with React using the Api of Lyrics Ovh.",
+    techs: "<strong><em>React Js</em></strong>.",
+    repoURL: "#",
+    projectUrl: "https://iqmzti.csb.app/",
+    projectId: "StaredLyrics",
+    imgs: [
+      {
+        src: "./images/proyecto5_img1.PNG",
+        alt: "Stared Lyrics imagen número 1",
+        title: "Stared Lyrics imagen número 1"
+      },
+      {
+        src: "./images/proyecto5_img2.PNG",
+        alt: "Stared Lyrics imagen número 2",
+        title: "Stared Lyrics imagen número 2"
+      },
+      {
+        src: "./images/proyecto5_img3.PNG",
+        alt: "Stared Lyrics imagen número 3",
+        title: "Stared Lyrics imagen número 3"
+      },
+      {
+        src: "./images/proyecto5_img4.PNG",
+        alt: "Stared Lyrics imagen número 4",
+        title: "Stared Lyrics imagen número 4"
+      }
+    ]
   }
 ]
 

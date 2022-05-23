@@ -567,22 +567,22 @@ const PROJECTS_DATA = [
     projectId: "StaredLyrics",
     imgs: [
       {
-        src: "./images/proyecto5_img1.PNG",
+        src: "./images/proyecto5_img1.png",
         alt: "Stared Lyrics imagen número 1",
         title: "Stared Lyrics imagen número 1"
       },
       {
-        src: "./images/proyecto5_img2.PNG",
+        src: "./images/proyecto5_img2.png",
         alt: "Stared Lyrics imagen número 2",
         title: "Stared Lyrics imagen número 2"
       },
       {
-        src: "./images/proyecto5_img3.PNG",
+        src: "./images/proyecto5_img3.png",
         alt: "Stared Lyrics imagen número 3",
         title: "Stared Lyrics imagen número 3"
       },
       {
-        src: "./images/proyecto5_img4.PNG",
+        src: "./images/proyecto5_img4.png",
         alt: "Stared Lyrics imagen número 4",
         title: "Stared Lyrics imagen número 4"
       }

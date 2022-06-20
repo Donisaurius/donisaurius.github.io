@@ -444,6 +444,91 @@ $formContainer.addEventListener("submit",(e) => {
 
 const PROJECTS_DATA = [
   {
+    title: "What u want to drink?",
+    description: "This is an app to search and save your favorites cocktails. Here you can find the instructions and ingredients for make them. Web site created using create-react-app.",
+    techs: "<strong><em>React Js</em></strong>, <strong><em>Bootstrap</em></strong>.",
+    repoURL: "https://github.com/Donisaurius/cocktails-app-react-codes",
+    projectUrl: "https://donisaurius.github.io/cocktails-app/",
+    projectId: "CocktailsApp",
+    imgs: [
+      {
+        src: "./images/proyecto7_img1.png",
+        alt: "Cocktails App image number 1",
+        title: "Cocktails App image number 1"
+      },
+      {
+        src: "./images/proyecto7_img2.png",
+        alt: "Cocktails App image number 2",
+        title: "Cocktails App image number 2"
+      },
+      {
+        src: "./images/proyecto7_img3.png",
+        alt: "Cocktails App image number 3",
+        title: "Cocktails App image number 3"
+      },
+      {
+        src: "./images/proyecto7_img4.png",
+        alt: "Cocktails App image number 4",
+        title: "Cocktails App image number 4"
+      }
+    ]
+  },
+  {
+    title: "Interest Calc App",
+    description: "This is an app created for calculate the interest of your inversions. Web site created using create-react-app.",
+    techs: "<strong><em>React Js</em></strong>, <strong><em>Bootstrap</em></strong>.",
+    repoURL: "https://github.com/Donisaurius/interests-calc-react-codes",
+    projectUrl: "https://incandescent-heliotrope-cafd28.netlify.app/",
+    projectId: "InterestCalcApp",
+    imgs: [
+      {
+        src: "./images/proyecto6_img1.png",
+        alt: "Interest Calc App image number 1",
+        title: "Interest Calc App image number 1"
+      },
+      {
+        src: "./images/proyecto6_img2.png",
+        alt: "Interest Calc App image number 2",
+        title: "Interest Calc App image number 2"
+      },
+      {
+        src: "./images/proyecto6_img3.png",
+        alt: "Interest Calc App image number 3",
+        title: "Interest Calc App image number 3"
+      }
+    ]
+  },
+  {
+    title: "Stared Lyrics",
+    description: "This is a web app where you can find the lyrics of your favorite songs. Let's sing! This is made with CodeSandBox. There you can see the source code. I made this app for practice my skills with React using the Api of Lyrics Ovh.",
+    techs: "<strong><em>React Js</em></strong>.",
+    repoURL: "#",
+    projectUrl: "https://donisaurius.github.io/lyrics-app/",
+    projectId: "StaredLyrics",
+    imgs: [
+      {
+        src: "./images/proyecto5_img1.png",
+        alt: "Stared Lyrics image number 1",
+        title: "Stared Lyrics image number 1"
+      },
+      {
+        src: "./images/proyecto5_img2.png",
+        alt: "Stared Lyrics image number 2",
+        title: "Stared Lyrics image number 2"
+      },
+      {
+        src: "./images/proyecto5_img3.png",
+        alt: "Stared Lyrics image number 3",
+        title: "Stared Lyrics image number 3"
+      },
+      {
+        src: "./images/proyecto5_img4.png",
+        alt: "Stared Lyrics image number 4",
+        title: "Stared Lyrics image number 4"
+      }
+    ]
+  },
+  {
     title: "Anemona's gallery",
     description: "Anemona's gallery is a web page created for show the life of Adonis Mendoza (myself) in the illustration world.",
     techs: "<strong><em>HTML</em></strong>, <strong><em>CSS</em></strong> and <strong><em>JavaScript</em></strong>.",
@@ -453,23 +538,23 @@ const PROJECTS_DATA = [
     imgs: [
       {
         src: "./images/proyecto1_img1.png",
-        alt: "Anemona gallery imagen número 1",
-        title: "Anemona gallery imagen número 1"
+        alt: "Anemona gallery image number 1",
+        title: "Anemona gallery image number 1"
       },
       {
         src: "./images/proyecto1_img2.png",
-        alt: "Anemona gallery imagen número 2",
-        title: "Anemona gallery imagen número 2"
+        alt: "Anemona gallery image number 2",
+        title: "Anemona gallery image number 2"
       },
       {
         src: "./images/proyecto1_img3.png",
-        alt: "Anemona gallery imagen número 3",
-        title: "Anemona gallery imagen número 3"
+        alt: "Anemona gallery image number 3",
+        title: "Anemona gallery image number 3"
       },
       {
         src: "./images/proyecto1_img4.png",
-        alt: "Anemona gallery imagen número 4",
-        title: "Anemona gallery imagen número 4"
+        alt: "Anemona gallery image number 4",
+        title: "Anemona gallery image number 4"
       }
     ]
   },
@@ -483,23 +568,23 @@ const PROJECTS_DATA = [
     imgs: [
       {
         src: "./images/proyecto2_img1.png",
-        alt: "Note-calories imagen número 1",
-        title: "Note-calories imagen número 1"
+        alt: "Note-calories image number 1",
+        title: "Note-calories image number 1"
       },
       {
         src: "./images/proyecto2_img2.png",
-        alt: "Note-calories imagen número 2",
-        title: "Note-calories imagen número 2"
+        alt: "Note-calories image number 2",
+        title: "Note-calories image number 2"
       },
       {
         src: "./images/proyecto2_img3.png",
-        alt: "Note-calories imagen número 3",
-        title: "Note-calories imagen número 3"
+        alt: "Note-calories image number 3",
+        title: "Note-calories image number 3"
       },
       {
         src: "./images/proyecto2_img4.png",
-        alt: "Note-calories imagen número 4",
-        title: "Note-calories imagen número 4"
+        alt: "Note-calories image number 4",
+        title: "Note-calories image number 4"
       }
     ]
   },
@@ -513,18 +598,18 @@ const PROJECTS_DATA = [
     imgs: [
       {
         src: "./images/proyecto3_img1.png",
-        alt: "Dots game imagen número 1",
-        title: "Dots game imagen número 1"
+        alt: "Dots game image number 1",
+        title: "Dots game image number 1"
       },
       {
         src: "./images/proyecto3_img2.png",
-        alt: "Dots game imagen número 2",
-        title: "Dots game imagen número 2"
+        alt: "Dots game image number 2",
+        title: "Dots game image number 2"
       },
       {
         src: "./images/proyecto3_img3.png",
-        alt: "Dots game imagen número 3",
-        title: "Dots game imagen número 3"
+        alt: "Dots game image number 3",
+        title: "Dots game image number 3"
       }
     ]
   },
@@ -538,53 +623,23 @@ const PROJECTS_DATA = [
     imgs: [
       {
         src: "./images/proyecto4_img1.png",
-        alt: "The web news imagen número 1",
-        title: "The web news imagen número 1"
+        alt: "The web news image number 1",
+        title: "The web news image number 1"
       },
       {
         src: "./images/proyecto4_img2.png",
-        alt: "The web news imagen número 2",
-        title: "The web news imagen número 2"
+        alt: "The web news image number 2",
+        title: "The web news image number 2"
       },
       {
         src: "./images/proyecto4_img3.png",
-        alt: "The web news imagen número 3",
-        title: "The web news imagen número 3"
+        alt: "The web news image number 3",
+        title: "The web news image number 3"
       },
       {
         src: "./images/proyecto4_img4.png",
-        alt: "The web news imagen número 4",
-        title: "The web news imagen número 4"
-      }
-    ]
-  },
-  {
-    title: "Stared Lyrics",
-    description: "This is a web app where you can find the lyrics of your favorite songs. Let's sing! This is made with CodeSandBox. There you can see the source code. I made this app for practice my skills with React using the Api of Lyrics Ovh.",
-    techs: "<strong><em>React Js</em></strong>.",
-    repoURL: "#",
-    projectUrl: "https://iqmzti.csb.app/",
-    projectId: "StaredLyrics",
-    imgs: [
-      {
-        src: "./images/proyecto5_img1.png",
-        alt: "Stared Lyrics imagen número 1",
-        title: "Stared Lyrics imagen número 1"
-      },
-      {
-        src: "./images/proyecto5_img2.png",
-        alt: "Stared Lyrics imagen número 2",
-        title: "Stared Lyrics imagen número 2"
-      },
-      {
-        src: "./images/proyecto5_img3.png",
-        alt: "Stared Lyrics imagen número 3",
-        title: "Stared Lyrics imagen número 3"
-      },
-      {
-        src: "./images/proyecto5_img4.png",
-        alt: "Stared Lyrics imagen número 4",
-        title: "Stared Lyrics imagen número 4"
+        alt: "The web news image number 4",
+        title: "The web news image number 4"
       }
     ]
   }

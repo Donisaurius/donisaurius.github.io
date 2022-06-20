@@ -557,7 +557,7 @@ const PROJECTS_DATA = [
         title: "The web news image number 4"
       }
     ]
-  },
+  }/*,
   {
     title: "What u want to drink?",
     description: "This is an app to search and save your favorites cocktails. Here you can find the instructions and ingredients for make them. Web site created using create-react-app.",
@@ -642,7 +642,7 @@ const PROJECTS_DATA = [
         title: "Stared Lyrics image number 4"
       }
     ]
-  }
+  }*/
 ]
 
 /* ---------------- */

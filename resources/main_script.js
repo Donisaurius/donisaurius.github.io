@@ -444,121 +444,6 @@ $formContainer.addEventListener("submit",(e) => {
 
 const PROJECTS_DATA = [
   {
-    title: "Anemona's gallery",
-    description: "Anemona's gallery is a web page created for show the life of Adonis Mendoza (myself) in the illustration world.",
-    techs: "<strong><em>HTML</em></strong>, <strong><em>CSS</em></strong> and <strong><em>JavaScript</em></strong>.",
-    repoURL: "https://github.com/Donisaurius/donisaurius.github.io",
-    projectUrl: "https://anemonagallery.000webhostapp.com",
-    projectId: "anemonaGallery",
-    imgs: [
-      {
-        src: "./images/proyecto1_img1.png",
-        alt: "Anemona gallery image number 1",
-        title: "Anemona gallery image number 1"
-      },
-      {
-        src: "./images/proyecto1_img2.png",
-        alt: "Anemona gallery image number 2",
-        title: "Anemona gallery image number 2"
-      },
-      {
-        src: "./images/proyecto1_img3.png",
-        alt: "Anemona gallery image number 3",
-        title: "Anemona gallery image number 3"
-      },
-      {
-        src: "./images/proyecto1_img4.png",
-        alt: "Anemona gallery image number 4",
-        title: "Anemona gallery image number 4"
-      }
-    ]
-  },
-  {
-    title: "Note-calories",
-    description: "Note-calories is a web app created for try to control the calories that people eat at day. You just need to put the food's name, the food's weight, and the food's cals. This app doesn't show how many calories are in your food when you put in, you have to know how many cals you're eating. With Note-calories you control the consume at day.",
-    techs: "<strong><em>HTML</em></strong>, <strong><em>CSS</em></strong> and <strong><em>JavaScript</em></strong>.",
-    repoURL: "https://github.com/Donisaurius/noteCalories",
-    projectUrl: "https://donisaurius.github.io/noteCalories/",
-    projectId: "noteCal",
-    imgs: [
-      {
-        src: "./images/proyecto2_img1.png",
-        alt: "Note-calories image number 1",
-        title: "Note-calories image number 1"
-      },
-      {
-        src: "./images/proyecto2_img2.png",
-        alt: "Note-calories image number 2",
-        title: "Note-calories image number 2"
-      },
-      {
-        src: "./images/proyecto2_img3.png",
-        alt: "Note-calories image number 3",
-        title: "Note-calories image number 3"
-      },
-      {
-        src: "./images/proyecto2_img4.png",
-        alt: "Note-calories image number 4",
-        title: "Note-calories image number 4"
-      }
-    ]
-  },
-  {
-    title: "Dot's game",
-    description: "Dot's game is a web app where you plus points when you touch the dots. Three level by three level a new dot will be on the screen. When you level up and level up the dots will move more faster, their size will change too, so you have to be focus. Luck!",
-    techs: "<strong><em>HTML</em></strong>, <strong><em>CSS</em></strong> and <strong><em>JavaScript</em></strong>.",
-    repoURL: "https://github.com/Donisaurius/dot-game",
-    projectUrl: "https://donisaurius.github.io/dot-game",
-    projectId: "dotGame",
-    imgs: [
-      {
-        src: "./images/proyecto3_img1.png",
-        alt: "Dots game image number 1",
-        title: "Dots game image number 1"
-      },
-      {
-        src: "./images/proyecto3_img2.png",
-        alt: "Dots game image number 2",
-        title: "Dots game image number 2"
-      },
-      {
-        src: "./images/proyecto3_img3.png",
-        alt: "Dots game image number 3",
-        title: "Dots game image number 3"
-      }
-    ]
-  },
-  {
-    title: "The web news",
-    description: "This is a web page that I made for a test. This was for proof my abilities with <strong><em>HTML</em></strong>, <strong><em>CSS</em></strong> and <strong><em>JavaScript</em></strong> making layouts. This is <strong>Responsive</strong> and the details of news are <strong>asynchronous</strong>.",
-    techs: "<strong><em>HTML</em></strong>, <strong><em>CSS</em></strong> and <strong><em>JavaScript</em></strong>.",
-    repoURL: "#",
-    projectUrl: "https://adonismendoza.000webhostapp.com/",
-    projectId: "webNews",
-    imgs: [
-      {
-        src: "./images/proyecto4_img1.png",
-        alt: "The web news image number 1",
-        title: "The web news image number 1"
-      },
-      {
-        src: "./images/proyecto4_img2.png",
-        alt: "The web news image number 2",
-        title: "The web news image number 2"
-      },
-      {
-        src: "./images/proyecto4_img3.png",
-        alt: "The web news image number 3",
-        title: "The web news image number 3"
-      },
-      {
-        src: "./images/proyecto4_img4.png",
-        alt: "The web news image number 4",
-        title: "The web news image number 4"
-      }
-    ]
-  }/*,
-  {
     title: "What u want to drink?",
     description: "This is an app to search and save your favorites cocktails. Here you can find the instructions and ingredients for make them. Web site created using create-react-app.",
     techs: "<strong><em>React Js</em></strong>, <strong><em>Bootstrap</em></strong>.",
@@ -642,7 +527,122 @@ const PROJECTS_DATA = [
         title: "Stared Lyrics image number 4"
       }
     ]
-  }*/
+  },
+  {
+    title: "The web news",
+    description: "This is a web page that I made for a test. This was for proof my abilities with <strong><em>HTML</em></strong>, <strong><em>CSS</em></strong> and <strong><em>JavaScript</em></strong> making layouts. This is <strong>Responsive</strong> and the details of news are <strong>asynchronous</strong>.",
+    techs: "<strong><em>HTML</em></strong>, <strong><em>CSS</em></strong> and <strong><em>JavaScript</em></strong>.",
+    repoURL: "#",
+    projectUrl: "https://adonismendoza.000webhostapp.com/",
+    projectId: "webNews",
+    imgs: [
+      {
+        src: "./images/proyecto4_img1.png",
+        alt: "The web news image number 1",
+        title: "The web news image number 1"
+      },
+      {
+        src: "./images/proyecto4_img2.png",
+        alt: "The web news image number 2",
+        title: "The web news image number 2"
+      },
+      {
+        src: "./images/proyecto4_img3.png",
+        alt: "The web news image number 3",
+        title: "The web news image number 3"
+      },
+      {
+        src: "./images/proyecto4_img4.png",
+        alt: "The web news image number 4",
+        title: "The web news image number 4"
+      }
+    ]
+  },
+  {
+    title: "Anemona's gallery",
+    description: "Anemona's gallery is a web page created for show the life of Adonis Mendoza (myself) in the illustration world.",
+    techs: "<strong><em>HTML</em></strong>, <strong><em>CSS</em></strong> and <strong><em>JavaScript</em></strong>.",
+    repoURL: "https://github.com/Donisaurius/donisaurius.github.io",
+    projectUrl: "https://anemonagallery.000webhostapp.com",
+    projectId: "anemonaGallery",
+    imgs: [
+      {
+        src: "./images/proyecto1_img1.png",
+        alt: "Anemona gallery image number 1",
+        title: "Anemona gallery image number 1"
+      },
+      {
+        src: "./images/proyecto1_img2.png",
+        alt: "Anemona gallery image number 2",
+        title: "Anemona gallery image number 2"
+      },
+      {
+        src: "./images/proyecto1_img3.png",
+        alt: "Anemona gallery image number 3",
+        title: "Anemona gallery image number 3"
+      },
+      {
+        src: "./images/proyecto1_img4.png",
+        alt: "Anemona gallery image number 4",
+        title: "Anemona gallery image number 4"
+      }
+    ]
+  },
+  {
+    title: "Note-calories",
+    description: "Note-calories is a web app created for try to control the calories that people eat at day. You just need to put the food's name, the food's weight, and the food's cals. This app doesn't show how many calories are in your food when you put in, you have to know how many cals you're eating. With Note-calories you control the consume at day.",
+    techs: "<strong><em>HTML</em></strong>, <strong><em>CSS</em></strong> and <strong><em>JavaScript</em></strong>.",
+    repoURL: "https://github.com/Donisaurius/noteCalories",
+    projectUrl: "https://donisaurius.github.io/noteCalories/",
+    projectId: "noteCal",
+    imgs: [
+      {
+        src: "./images/proyecto2_img1.png",
+        alt: "Note-calories image number 1",
+        title: "Note-calories image number 1"
+      },
+      {
+        src: "./images/proyecto2_img2.png",
+        alt: "Note-calories image number 2",
+        title: "Note-calories image number 2"
+      },
+      {
+        src: "./images/proyecto2_img3.png",
+        alt: "Note-calories image number 3",
+        title: "Note-calories image number 3"
+      },
+      {
+        src: "./images/proyecto2_img4.png",
+        alt: "Note-calories image number 4",
+        title: "Note-calories image number 4"
+      }
+    ]
+  },
+  {
+    title: "Dot's game",
+    description: "Dot's game is a web app where you plus points when you touch the dots. Three level by three level a new dot will be on the screen. When you level up and level up the dots will move more faster, their size will change too, so you have to be focus. Luck!",
+    techs: "<strong><em>HTML</em></strong>, <strong><em>CSS</em></strong> and <strong><em>JavaScript</em></strong>.",
+    repoURL: "https://github.com/Donisaurius/dot-game",
+    projectUrl: "https://donisaurius.github.io/dot-game",
+    projectId: "dotGame",
+    imgs: [
+      {
+        src: "./images/proyecto3_img1.png",
+        alt: "Dots game image number 1",
+        title: "Dots game image number 1"
+      },
+      {
+        src: "./images/proyecto3_img2.png",
+        alt: "Dots game image number 2",
+        title: "Dots game image number 2"
+      },
+      {
+        src: "./images/proyecto3_img3.png",
+        alt: "Dots game image number 3",
+        title: "Dots game image number 3"
+      }
+    ]
+  }
 ]
 
 /* ---------------- */
@@ -681,7 +681,7 @@ const creatingProjectsPost = () => {
       li.classList.add("slider-item");
       li.setAttribute("data-project",data.projectId)
 
-      if(!img.title.match("número 1")){
+      if(!img.title.match("number 1")){
         li.classList.add("slideImg")
       }
 
